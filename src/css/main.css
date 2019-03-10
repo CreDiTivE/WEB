@@ -89,9 +89,13 @@ body {
   color: #29487d;
 }
 
-.email_contact {
-  cursor: text;
-  color: #777;
+.email_contact a {
+  text-decoration: none;
+  color: #d93025;
+}
+
+.email_contact a:hover {
+  color: #831d16;
 }
 
 .about_me-image {

@@ -1,10 +1,9 @@
-
-body {
-	background-color: #000;
-}
 html,
 body {
 	height: 100%;
+}
+.contact-page {
+  background-color: #000;
 }
 .imagebg {
 	background-image: url("../img/avenue-2215317_1920.jpg");

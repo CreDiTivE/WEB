@@ -29,7 +29,7 @@ class ComposerStaticInitd359baac21f520c04e608f4eed750560
         ),
         'FormGuide\\Handlx\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/php',
         ),
     );
 
