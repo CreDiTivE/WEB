@@ -1,0 +1,191 @@
+/* --------------------- Main rules ----------------------------------- */
+
+// colors
+$color: #8f8f8f
+$color2: #e8f380
+$color3: #333
+
+*
+    margin: 0
+    padding: 0
+
+#menu  
+    ul
+        display: flex
+        justify-content: space-around
+        margin-top: 15px
+
+#menu 
+    ul 
+        li
+	       list-style-type: none
+
+#menu 
+    ul 
+        li
+            a
+                color: $color3
+                display: inline-block
+                text-decoration: none
+                font-size: 20px
+                position: relative
+
+#menu
+    ul
+        li
+            a::after
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                border-bottom: 2px solid $color3
+                content: ''
+                transform: scaleX(0)
+                opacity: 0
+                transition: all .2s linear
+
+#menu
+    ul
+        li
+            a:hover::after
+                transform: scaleX(1)
+                opacity: 1
+
+
+@media (min-width: 1025px)
+    #menu
+        ul
+            padding: 0px 10% 0px 10%
+
+@media (min-width: 1367px)
+    #menu
+        ul
+            padding: 0px 15% 0px 15%
+
+.header-mobile
+    display: block
+.mobile-toggle
+    display: inline-block
+.header
+    display: none
+
+@media (min-width: 601px)
+    .header-mobile
+        display: none
+    .mobile-toggle
+        display: none
+    .header
+        display: block
+
+
+// Navigation
+.mobile
+    position: fixed
+    max-height: 70px
+    z-index: 999
+    width: 100%
+    padding-top: 14px
+    background: none
+    overflow: hidden
+    -webkit-transition: all 0.3s
+    transition: all 0.3s
+    opacity: 0
+    top: -100px
+    padding-bottom: 6px
+
+.open-nav
+    max-height: 400px !important
+    .mobile-toggle
+        transform: rotate(-90deg)
+        -webkit-transform: rotate(-90deg)
+  
+
+.sticky
+    background-color: rgba(255, 255, 255, 0.93)
+    opacity: 1
+    top: 0px
+    border-bottom: 1px solid lighten($color, 30%)
+
+.mobile
+    .logo
+        font-family: 'Vladimir Script'
+        padding-left: 14px
+        font-size: 42px
+        font-weight: 600
+        color: $color3
+        float: left
+        display: block
+        margin-top: 0
+        line-height: 1
+        margin-bottom: 10px
+        text-decoration: none
+
+#mobile-menu
+    width: 100%
+
+    ul
+        padding-start: 0px
+        list-style: none
+        overflow: hidden
+        padding-top: 30px
+        padding-bottom: 10px
+        float: left
+        text-align: center
+        width: 100%
+    
+        li
+            display: inline-block
+            margin-left: 35px
+            line-height: 1.5
+            width: 100%
+            padding: 7px 0
+            margin: 0
+
+            a
+                color: $color3
+                text-transform: uppercase
+                position: relative
+                text-decoration: none
+                font-size: 16px
+
+#mobile-menu 
+    ul
+        li
+            a::after
+                position: absolute
+                left: 0
+                bottom: -2px
+                width: 100%
+                border-bottom: 2px solid $color3
+                content: ''
+                transform: scaleX(0)
+                opacity: 0
+                transition: all .2s linear
+
+#mobile-menu 
+    ul
+        li
+            a:hover::after
+                transform: scaleX(1)
+                opacity: 1
+
+.mobile-toggle
+    display: none
+    cursor: pointer
+    font-size: 20px
+    position: absolute
+    right: 22px
+    top: 22px
+    width: 30px
+    -webkit-transition: all 200ms ease-in
+    -moz-transition: all 200ms ease-in
+    transition: all 200ms ease-in
+    display: block
+  
+    span
+        width: 30px
+        height: 4px
+        margin-bottom: 6px
+        border-radius: 1000px
+        background: $color3
+        display: block

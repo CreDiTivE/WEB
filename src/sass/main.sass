@@ -1,0 +1,252 @@
+/* --------------------- Fonts ----------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic')
+@font-face
+    font-family: 'Vladimir Script'
+    src: url('VladimirScript.woff2') format('woff2'), url('VladimirScript.woff') format('woff'), url('VLADIMIR.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+
+
+/* --------------------- Main rules ----------------------------------- */
+
+*
+	box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  cursor: default
+  margin: 0
+  font:
+  	family: 'Open sans', sans-serif
+
+.logo, .header h1
+  font:
+      family: 'Vladimir Script'
+
+.header
+  text-align: center
+  color: #333
+  padding: 32px
+  display: block
+
+  h1
+    font-size: 50px
+
+
+.scrolling-box
+  scroll-behavior: smooth
+  margin-top: 70px
+
+.title
+	scroll-behavior: smooth
+	text-align: center
+	padding: 6px 0px
+
+	span
+		font-size: 22px
+		font-weight: 400
+		font-style: italic
+
+.next
+	padding-top: 80px
+
+.row
+  display: flex
+  flex-wrap: wrap
+  padding: 0 4px
+
+
+.about_me-text
+  margin: auto
+  padding: 5%
+  text-indent: 20px
+
+.about_me-contact
+  text-align: center
+  font-size: 18px
+  padding: 3% 0 2% 0
+
+.facebook_contact
+    a
+      text-decoration: none
+      color: #4267b2
+    a:hover
+      color: #29487d
+
+.email_contact
+  cursor: text
+  color: #777
+
+.about_me-image
+  margin: auto
+  text-align: center
+
+  img
+    width: 80%
+
+.sold, .buy
+  float: right
+  text-transform: uppercase
+  font-weight: bold
+
+.sold
+  color: #ff3333
+
+.buy
+  color: #66ff33
+
+/* --------------------- Scroll top button ----------------------------------- */
+
+#back-to-top
+  display: none
+  position: fixed
+  bottom: 25px
+  right: 25px
+  z-index: 99
+  font-size: 18px
+  border: none
+  outline: none
+  background-color: black
+  color: white
+  cursor: pointer
+  padding: 10px 15px
+  border-radius: 4px
+  opacity: 0.7
+
+#back-to-top:hover
+  background-color: black
+  opacity: 0.8
+
+#back-to-top
+  a
+    text-decoration: none
+    color: white
+
+
+/* Create four equal columns that sits next to each other */
+.column
+    margin-top: 8px
+    flex: 100%
+    max-width: 100%
+    padding: 0 4px
+
+.column img
+    margin-top: 0px
+    margin-bottom: 8px
+    vertical-align: middle
+    width: 100%
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (min-width: 601px)
+    .about_me-contact
+      font-size: 120%
+
+    .column
+        flex: 50%
+        max-width: 50%
+
+    .about_me-text
+      max-width: 100%
+
+    .about_me-image
+      max-width: 50%
+
+    .scrolling-box
+      margin-top: 0px
+
+    .header
+       display: block
+
+    .title 
+      text-align: left
+      padding: 6px 0px 3px 30px
+      margin-top: 70px
+
+      span
+        font-size: 24px
+
+    #About_me
+      text-align: center 
+      padding: 6px 0px
+      margin-top: 0px
+
+    #Architecture
+      margin-top: 30px
+
+    .about_me-text
+      padding: 2%
+
+    .about_me-image
+      img
+        width: 70%
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (min-width: 801px)
+    .column
+        flex: 25%
+        max-width: 25%
+
+    .title 
+      span
+        font-size: 26px
+
+    .about_me-image
+      img
+        width: 60%
+
+@media (min-width: 1025px)
+	body
+		margin: 0px 10% 0px 10%
+
+  .title 
+    span
+      font-size: 28px
+
+  .about_me-text
+    padding: 2% 12% 0 12%
+  
+  .about_me-image
+      img
+        width: 50%
+
+@media (min-width: 1366px)
+  .about_me-image
+      img
+        width: 40%
+
+
+/* --------------------- Magnific popup ----------------------------------- */
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img
+  padding: 0
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after
+  top: 0
+  bottom: 0
+
+/* padding for main container */
+.mfp-no-margins .mfp-container
+  padding: 0
+
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg
+  opacity: 0
+  -webkit-backface-visibility: hidden
+  -webkit-transition: all 0.3s ease-out
+  -moz-transition: all 0.3s ease-out
+  -o-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+
+.mfp-with-zoom.mfp-ready .mfp-container
+    opacity: 1
+.mfp-with-zoom.mfp-ready.mfp-bg
+    opacity: 0.8
+
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg
+  opacity: 0
